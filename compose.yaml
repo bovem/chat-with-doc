@@ -1,0 +1,11 @@
+version: '3.6'
+
+services:
+  chat-with-doc:
+    container_name: chat-with-doc
+    build: .
+    environment:
+      OLLAMA_URL: "http://localhost:11434"
+    volumes:
+      - .:/app/
+    restart: unless-stopped
